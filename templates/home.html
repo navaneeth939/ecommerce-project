@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/styles/webpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="">Apple</a><p>Smart Watch</p></h1>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'register' %}">Register</a></li>
+                <li><a href="#">Furniture</a></li>
+                <li><a href="{% url 'logout' %}">Logout</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="shop">
+                <a href="{% url 'custemerd' %}"><i class="fa-solid fa-user"></i></a>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section">
+        <div class="content">
+            <div class="left-content">
+                <h3>Apple</h3>
+                <h1>SALE 30% OFF</h1>
+                <h5>Make a Rich Life</h5>
+                <div class="a">
+                    <a href="#">SHOP NOW</a>
+                </div>
+            </div>
+            <div class="right-content">
+                <div class="image">
+                    <img src="static/images/waatch.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="mani-content">
+            <div class="flex-content">
+                <div class="small-flex">
+                    <div class="content-1">
+                        <h1>BEST DEAL</h1>
+                        <p>Edge to Edge full Screen Coverage</p>
+                    </div>
+                    <div class="image-flex">
+                        <img src="static/images/waatch2.png" alt="">
+                    </div>
+                </div>
+
+                <div class="small-flex">
+                    <div class="content-1">
+                        <h1>NEW ARRIVAL</h1>
+                        <p>Edge to Edge full Screen Coverage</p>
+                    </div>
+                    <div class="image-flex">
+                        <img src="static/images/waatch1.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="heding">
+            <h1>Products</h1>
+        </div>
+        <div class="products">
+            <div class="items">
+                <img src="/static/images/appleiphone-1.jpg" alt="">
+                <h2>Apple 16 pro</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <img src="/static/images/appleiphone-2.jpg" alt="">
+                <h2>Apple 16 pro</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <img src="/static/images/appleiphone-3.png" alt="">
+                <h2>Apple 16 pro</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <img src="/static/images/appleiphone-5.png" alt="">
+                <h2>Apple 16 pro</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+{% endblock %}
