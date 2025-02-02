@@ -1,23 +1,88 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>My First Webpage</title>
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
   </head>
-  <nav style="text-align: center; width: 100%;background-color: rgb(29, 31, 31);height: 4vh;">
-    <a href="{% url 'home' %}">HOME</a>
-    <a href="{% url 'register' %}">REGISTER</a>
-  
-    {% if not user.is_authenticated %}
-        <a href="{% url 'login' %}">LOGIN</a>
-    {% endif %}
-    {% if user.is_authenticated %}
-        <a href="{% url 'logout' %}">LOGOUT</a>
-    {% endif %}
+  <nav>
+    <h1><a href="">Apple</a></h1>
+    <ul id="sidebar">
+        <li onclick="closebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'register' %}">Register</a></li>
+        <li><a href="{% url 'Accesseries' %}">Accessories</a></li>
+        <li><a href="{% url 'logout' %}">Logout</a></li>
+        <li><a href="{% url 'contactus' %}">Contact Us</a></li>
+    </ul>
+    <ul>
+        <li class="hideOnMobile"><a href="{% url 'home' %}">Home</a></li>
+        <li class="hideOnMobile"><a href="{% url 'register' %}">Register</a></li>
+        <li class="hideOnMobile"><a href="{% url 'Accesseries' %}">Accessories</a></li>
+        <li class="hideOnMobile"><a href="{% url 'logout' %}">Logout</a></li>
+        <li class="hideOnMobile"><a href="{% url 'contactus' %}">Contact Us</a></li>
+        <li onclick="showSidebar()" class="show"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+    <div class="shop">
+        <a href="{% url 'custemerd' %}"><i class="fa-solid fa-user"></i></a>
+        <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+    </div>
   </nav>
+
       {% block content %}
 
       {% endblock %}
+      <footer>
+        <div class="footer">
+            <div class="content-2">
+                <div class="left">
+                    <h3>Followed by</h3>
+                </div>
+                <div class="right">
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://x.com/?lang=en"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+    
+            <div class="flex-content-1">
+                <div class="nameandproduct">
+                    <h2><a href="">Apple</a><p>Smart Watch</p></h2>
+                    <h5>we are a big company always looking <br> for new and creative 
+                        ideas to help you <br> with our product in your everyday work
+                    </h5>
+                </div>
+    
+                <div class="nameandproduct-1">
+                    <h3>Contacts</h3>
+                    <p><i class="fa-solid fa-map"></i> Via Kozhikode , naduvannur 643614</p>
+                    <p><i class="fa-solid fa-phone"></i> 9207196767</p>
+                    <p><i class="fa-solid fa-envelope"></i> navaneethsonu70@gmail.com</p>
+                </div>
+    
+                <div class="nameandproduct-2">
+                    <h3>link</h3>
+                    <p>Home</p>
+                    <p>Features</p>
+                    <p>How To Work</p>
+                    <p>Our Cliens</p>
+                </div>
+    
+                <div class="nameandproduct-3">
+                    <h3>.</h3>
+                    <p>Plans & Pricing</p>
+                    <p>Afiliate</p>
+                    <p>Tearms</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="static/scripts/base.js"></script>
+    
   <body>
   </body>
 </html>

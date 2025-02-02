@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -7,28 +9,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="static/styles/home.css">
+    <link rel="stylesheet" href="{% static 'styles/home.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <nav>
-            <h1><a href="">Apple</a><p>Smart Watch</p></h1>
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li>
-                <li><a href="#">Furniture</a></li>
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-            <div class="shop">
-                <a href="{% url 'custemerd' %}"><i class="fa-solid fa-user"></i></a>
-                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
-            </div>
-        </nav>
     </header>
-
     <section class="section">
         <div class="content">
             <div class="left-content">
@@ -36,7 +22,7 @@
                 <h1>SALE 30% OFF</h1>
                 <h5>Make a Rich Life</h5>
                 <div class="a">
-                    <a href="#">SHOP NOW</a>
+                    <a href="{% url 'onlywatches' %}">SHOP NOW</a>
                 </div>
             </div>
             <div class="right-content">
@@ -56,17 +42,17 @@
                         <p>Edge to Edge full Screen Coverage</p>
                     </div>
                     <div class="image-flex">
-                        <img src="static/images/waatch2.png" alt="">
+                        <a href="{% url 'onlywatches' %}"><img src="static/images/waatch2.png" alt=""></a>
                     </div>
                 </div>
 
                 <div class="small-flex">
                     <div class="content-1">
                         <h1>NEW ARRIVAL</h1>
-                        <p>Edge to Edge full Screen Coverage</p>
+                        <p>Apple All Accessories</p>
                     </div>
                     <div class="image-flex">
-                        <img src="static/images/waatch1.png" alt="">
+                       <a href="{% url 'Accesseries' %}"><img src="static/images/waatch1.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -75,7 +61,7 @@
 
     <section>
         <div class="heding">
-            <h1>Products</h1>
+            <h1>Iphones</h1>
         </div>
         <div class="products">
             <div class="items">
@@ -111,9 +97,118 @@
             </div>
         </div>
         <div class="divbutton">
-            <button><a href="">Explore</a></button>
+            <button><a href="{% url 'iphones' %}">EXPLORE</a></button>
         </div>
     </section>
+
+    <section>
+        <div class="heding">
+            <h1>Apple Watchs</h1>
+        </div>
+        <div class="products">
+            <div class="items">
+                <a href=""><img src="/static/images/applewatchseries11.jpg" alt=""></a>
+                <h2>Apple Watch 10</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <a href=""><img src="static/images/NATO-WITH-FACE-BLACK.avif" alt=""></a>
+                <h2>Apple Watch 7</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <a href=""><img src="static/images/applewatchseries12.jpg" alt=""></a>
+                <h2>Apple Watch 8</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <a href=""><img src="static/images/applewatchseries13.webp" alt=""></a>
+                <h2>Apple Watch 9</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+        <div class="divbutton">
+            <button><a href="{% url 'onlywatches' %}">MORE</a></button>
+        </div>
+    </section>
+
+    <section>
+        <div class="heding">
+            <h1>MacBook</h1>
+        </div>
+        <div class="para">
+            <div class="description">
+                <p>The MacBook Pro is a line of Mac laptop computers developed and manufactured by Apple. 
+                Introduced in 2006, it is the high-end sibling of the MacBook family, sitting above the ultra-portable MacBook Air 
+                and previously the low-end MacBook. It is currently sold with 14-inch and 16-inch screens, all using Apple M-series chips. 
+                Before Apple silicon, the MacBook Pro used Intel chips, and was the first laptop made by Apple</p>
+            </div>
+            <div class="macbookphoto">
+                <a href="{% url 'macbook' %}"><img src="/static/images/mackboook.png" alt=""></a>
+            </div>
+        </div>
+        <div class="divbutton">
+            <button><a href="{% url 'macbook' %}">MORE</a></button>
+        </div>
+    </section>
+    
+    <section>
+        <div class="heding">
+            <h1>AirPods Max</h1>
+        </div>
+        <div class="airpodmax">
+            <div class="airpodphoto">
+                <a href="{% url 'airpodmax' %}"><img src="static/images/appleaipodmax.jpg" alt=""></a>
+            </div>
+            <div class="description-1">
+                <p>AirPods Max are wireless Bluetooth over-ear headphones designed by Apple, and released 
+                on December 15, 2020. They are Apple's highest-end option in the AirPods lineup, 
+                sold alongside the base model AirPods and mid-range AirPods Pro.
+                The main changes of the AirPods Max over the mid-range AirPods Pro are the over-ear design with larger speakers, 
+                inclusion of Apple's Digital Crown (found on the Apple Watch), more color options, and longer battery life.</p>
+            </div>
+        </div>
+        <div class="divbutton">
+            <button><a href="{% url 'airpodmax' %}">MORE</a></button>
+        </div>
+    </section>
+
+    <section>
+        <div class="form">
+            <form id="validationform" method="POST" onsubmit="return  formvalidation()" action="{% url 'home' %}">
+                {% csrf_token %}
+                <input type="text" id="name" name="name" placeholder="Enter name">
+                <span id="nameerror" class="error"></span>
+
+                <input type="text" id="address" name="address" placeholder="Address">
+                <span id="addresserror" class="error"></span>
+
+                <input type="text" id="product" name="product" placeholder="Product name">
+                <span id="producterror" class="error"></span> 
+
+                <input type="number" id="number" name="number" placeholder="Phone number">
+                <span id="numbererror" class="error"></span>
+
+                <div class="formbutton">
+                    <a href=""><button type="submit">SUBMIT</button></a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script src="static/scripts/home.js"></script>
+    
 </body>
 </html>
 {% endblock %}

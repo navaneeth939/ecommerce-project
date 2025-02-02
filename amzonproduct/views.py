@@ -66,6 +66,27 @@ def custemerd(request):
             return redirect('home')
       else:
             return render(request,'custemerd.html')
-            
 
+
+
+
+def onlywatches(request):
+    return render(request, 'onlywatches.html')
+
+
+def contactus(request):
+      return render(request, 'contactus.html')
+
+
+def iphones(request):
+      return render(request, 'iphones.html')
+
+def Accesseries(request):
+      return render(request, 'Accesseries.html')
+
+def macbook(request):
+      return render(request, 'macbook.html')
+
+def airpodmax(request):
+      return render(request, 'airpodmax.html')
 

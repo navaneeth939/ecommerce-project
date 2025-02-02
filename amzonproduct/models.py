@@ -14,7 +14,7 @@ class Products(models.Model):
 class custemdetails(models.Model):
     user=models.ForeignKey(User,on_delete=models.CASCADE,null=True)
     address = models.CharField(max_length=200)
-    pincode = models.IntegerField()
+    pincode = models.CharField(max_length=100)
     disctict = models.CharField(max_length=200)
     city = models.CharField(max_length=200)
 

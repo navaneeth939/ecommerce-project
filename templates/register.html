@@ -1,26 +1,40 @@
-{% extends "base.html" %}
-
+{% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static 'styles/register.css' %}">
 
 <div class="dform">
 <div class="container">
-      <h2>Pleace register here</h2>
-      <form method='POST'>
+      <form method='POST' id="validation" onsubmit="return ValiDation()">
+            <h2>Pleace register here</h2>
+            <hr>
             {% csrf_token %}
             <label for='fname'>First Name</label>
             <input type='text' id='fname' name='fname' required>
+            <span class="error" id="fnameerror"></span>
+
             <label for='lname'>Last Name</label>
             <input type='text' id='lname' name='lname' required>
+            <span class="error" id="lnameerror"></span>
+
             <label for='email'>Email</label>
             <input type='email' id='email' name='email' required>
+            <span class="error" id="emailerror"></span>
+
             <label for='uname'>username</label>
             <input type='text' id='uname' name='uname' required>
+            <span class="error" id="unameerror"></span>
+
             <label for='pword'>Password</label>
             <input type='password' id='pword' name='pword' required>
+            <span class="error" id="pworderror"></span>
+
             <label for='cpassword'>Confirm password</label>
             <input type='password' id='cpassword' name='cpassword' required>
-            <input type='submit' value='register'>
+            <span class="error" id="cpassworderror"></span>
+
+            <input type='submit' class="submit" value='register'>
       </form>
+      <script src="register.js"></script>
 </div>
 </div>
 {% endblock %}

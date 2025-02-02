@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles/macbook.css' %}">
+</head>
+<body>
+    <section>
+        <div class="heading">
+            <h1>MacBook</h1>
+        </div>
+        <div class="products">
+            <div class="items">
+                <a href=""><img src="/static/images/macbook-1.webp" alt=""></a>
+                <h2>Macbook Pro</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <a href=""><img src="/static/images/macbook-2.webp" alt=""></a>
+                <h2>Macbook</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+               <a href=""><img src="/static/images/macbook-3.webp" alt=""></a>
+                <h2>Macbook</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <a href=""><img src="/static/images/macbook-4.webp" alt=""></a>
+                <h2>Macbook</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="products">
+            <div class="items">
+                <a href=""><img src="/static/images/macbook-5.webp" alt=""></a>
+                <h2>Macbook</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <a href=""><img src="/static/images/macbook-6.webp" alt=""></a>
+                <h2>Macbook</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+               <a href=""><img src="/static/images/macbook-7.webp" alt=""></a>
+                <h2>Macbook</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+
+            <div class="items">
+                <a href=""><img src="/static/images/macbook-8.webp" alt=""></a>
+                <h2>Macbook Max</h2>
+                <div class="des">
+                    <p>orem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                </div>
+            </div>
+        </div>
+        <div class="divbutton">
+            <button><a href="{% url 'home' %}">BACK</a></button>
+        </div>
+    </section>
+</body>
+</html>
+
+{% endblock %}
